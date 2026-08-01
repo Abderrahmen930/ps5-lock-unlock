@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>ps5-lock-unlock</AssemblyName>
+    <RootNamespace>SharpProsperoCusaLocker</RootNamespace>
+    <PublishAot>true</PublishAot>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <!-- SharpProspero SDK hook: set SHARPPROSPERO_ROOT to the SDK checkout before building. -->
+  <Import Project="$(SHARPPROSPERO_ROOT)/build/SharpProspero.Payload.targets"
+          Condition="'$(SHARPPROSPERO_ROOT)' != '' and Exists('$(SHARPPROSPERO_ROOT)/build/SharpProspero.Payload.targets')" />
+</Project>
